@@ -39,10 +39,20 @@ import os
 
 # In[2]:
 
+# Retrieve the API key from the environment variable
+api_key = os.getenv('GOOGLE_GENAI_API_KEY')
+
+# Check if the API key was retrieved successfully
+if api_key is None:
+    print("Error: GOOGLE_GENAI_API_KEY environment variable is not set.")
+    sys.exit()
+print(len(api_key))
+
 # In[3]:
 
 
-genai.configure(api_key=os.getenv('GOOGLE_GENAI_API_KEY'))
+
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
