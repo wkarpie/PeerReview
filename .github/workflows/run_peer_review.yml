@@ -1,8 +1,8 @@
-name: Run PeerReview Script Weekly
+name: Run PeerReview Script Daily
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # This cron expression runs every Sunday at midnight (UTC)
+    - cron: '0 0 * * *'  # This cron expression runs every day at midnight (UTC)
   workflow_dispatch:  # Allows manual triggering from GitHub UI
 
 jobs:
