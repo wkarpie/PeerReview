@@ -52,8 +52,12 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 # In[4]:
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
 
-response = requests.get('https://inspirehep.net/api/literature?sort=mostrecent&size=250&page=1&q=a%20Joseph.Karpie.1')
+response = requests.get('https://inspirehep.net/api/literature?sort=mostrecent&size=250&page=1&q=a%20Joseph.Karpie.1', headers=headers)
+print(response.headers)
 
 
 soup = BeautifulSoup(response.text, "html.parser")
