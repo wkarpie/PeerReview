@@ -1,0 +1,6 @@
+google-generativeai
+requests
+beautifulsoup4
+httpx
+pandas
+openpyxl  # For reading/writing Excel files
