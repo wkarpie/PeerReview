@@ -70,14 +70,11 @@ soup = BeautifulSoup(response.text, "html.parser")
 # In[5]:
 
 
-# Get the content inside <p> tag
-json_data = soup.find('p').text  
+# Parse the response as JSON (instead of using BeautifulSoup)
+data = response.json()  # Automatically decodes the JSON response
 
-#Parse the JSON string into a Python dictionary
-data = json.loads(json_data)
-
-#Extract the data from the nested dictionary
-hits = data['hits']['hits']
+# Now you can work with the 'data' dictionary and process it
+hits = data.get('hits', {}).get('hits', [])
 
 #Normalize the nested structure and convert it to a DataFrame. This will flatten the nested JSON structure into a more tabular form
 df_publications = pd.json_normalize(hits)
