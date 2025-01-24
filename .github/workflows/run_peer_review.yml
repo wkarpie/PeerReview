@@ -23,6 +23,9 @@ jobs:
           pip install -r requirements.txt  # Make sure you have a requirements.txt with the necessary libraries
 
       - name: Run PeerReview script
+        env:
+          GOOGLE_EMAIL_APPWORD: ${{ secrets.GOOGLE_EMAIL_APPWORD }} 
+          GOOGLE_GENAI_API_KEY: ${{ secrets.GOOGLE_GENAI_API_KEY }}
         run: |
           python PeerReview.py  # Run your Python script
 
