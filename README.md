@@ -1,5 +1,5 @@
 # <ins>**Peer Review**<ins>  
-# <ins>Monitoring and Reviewing Academic Publications by Author<ins>  
+# Monitoring and Reviewing Academic Publications by Author
 
 
 # **Outline**
