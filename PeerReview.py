@@ -35,7 +35,7 @@ import google.generativeai as genai
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
+import os
 
 # In[2]:
 
@@ -46,7 +46,7 @@ import credentials
 # In[3]:
 
 
-genai.configure(api_key=credentials.google_genai_api_key)
+genai.configure(api_key=os.getenv('GOOGLE_GENAI_API_KEY'))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
@@ -237,7 +237,7 @@ df_new_publications['suggestion'][0]
 
 # Email credentials
 email_address = "wkarpie.dev@gmail.com"
-email_password = credentials.google_email_appword  # Use your App Password if 2FA is enabled
+email_password = GOOGLE_EMAIL_APPWORD  # Use gmail App Password if 2FA is enabled
 
 # Recipient
 to_email = "wkarpie.dev@gmail.com"
