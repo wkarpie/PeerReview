@@ -54,7 +54,9 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 response = requests.get('https://inspirehep.net/api/literature?sort=mostrecent&size=250&page=1&q=a%20Joseph.Karpie.1')
-soup = BeautifulSoup(response.text)
+
+
+soup = BeautifulSoup(response.text, "html.parser")
 
 
 # # 3. Data Formatting
