@@ -1,5 +1,5 @@
 # <ins>**Peer Review**<ins> - Monitoring and Reviewing Academic Publications by Author
-### This script uses requests, BeautifulSoup, Google's Gemini API to retrieve academic publications from a specific author and review the newest articles.
+### This script uses requests, BeautifulSoup, and Google's Gemini API to retrieve academic publications from a specific author, review the new articles and sends an email summary.
 
 # **Outline**
 1. Introduction
