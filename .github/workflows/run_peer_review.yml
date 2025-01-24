@@ -9,6 +9,9 @@ jobs:
   run-peer-review:
     runs-on: ubuntu-latest  # Use an Ubuntu runner
 
+    permissions:
+      contents: write  # Grant write access to contents (this is needed for git push)    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
