@@ -39,10 +39,6 @@ import os
 
 # In[2]:
 
-
-import credentials
-
-
 # In[3]:
 
 
