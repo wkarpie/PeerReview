@@ -39,14 +39,17 @@ import os
 
 # In[2]:
 
-# Retrieve the API key from the environment variable
+# Retrieve the API keys from the environment variable
 api_key = os.getenv('GOOGLE_GENAI_API_KEY')
+GOOGLE_EMAIL_APPWORD = os.getenv('GOOGLE_EMAIL_APPWORD')
 
-# Check if the API key was retrieved successfully
+# Check if the API keys were retrieved successfully
 if api_key is None:
     print("Error: GOOGLE_GENAI_API_KEY environment variable is not set.")
     sys.exit()
-print(len(api_key))
+if GOOGLE_EMAIL_APPWORD is None:
+    print("Error: GOOGLE_EMAIL_APPWORD environment variable is not set.")
+    sys.exit()
 
 # In[3]:
 
