@@ -270,9 +270,9 @@ try:
             f"<body>"
             f"<p>Hello there,</p>"
             f"<p><strong>Joseph published something new:</strong> {row['titles']}</p>"
-            f"<p><strong>Here is a Summary (written for a five-year-old):</strong><br>{summary}</p>"
+            f"<p><strong>Here is a summary (written for a five-year-old):</strong><br>{summary}</p>"
             f"<p><strong>Link:</strong> <a href='{row['arxiv_link']}'>{row['arxiv_link']}</a></p>"
-            f"<p><strong>Here is an email draft to Joseph, with some suggetsions for improvement:</strong> <br>{suggestion}</p>"
+            f"<p><strong>Here is a draft email to Joseph, with some suggetsions for improvement:</strong> <br>{suggestion}</p>"
             f"</body>"
             f"</html>"
         )
