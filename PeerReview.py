@@ -210,7 +210,7 @@ for index, row in df_new_publications.iterrows():
         continue
 
     # Generate summary
-    summary_prompt = """Summarize this as if you’re the author trying to explain it to someone who's knows far less about physics than you do.
+    summary_prompt = """Summarize this as if you’re the author trying to explain it to a five year old, call them "little scientist."
     Keep it simple, fun, and as if you're giving a crash course for someone who barely remembers anything from high school physics."""
     summary = generate_summary(doc_data, summary_prompt)
     summaries.append(summary)
@@ -269,10 +269,10 @@ try:
             f"<html>"
             f"<body>"
             f"<p>Hello there,</p>"
-            f"<p><strong>Joseph published:</strong> {row['titles']}</p>"
-            f"<p><strong>Summary:</strong><br>{summary}</p>"
-            f"<p><strong>Article link:</strong> <a href='{row['arxiv_link']}'>{row['arxiv_link']}</a></p>"
-            f"<p><strong>Suggested email:</strong> <br>{suggestion}</p>"
+            f"<p><strong>Joseph published something new:</strong> {row['titles']}</p>"
+            f"<p><strong>Here is a Summary (written for a five-year-old):</strong><br>{summary}</p>"
+            f"<p><strong>Link:</strong> <a href='{row['arxiv_link']}'>{row['arxiv_link']}</a></p>"
+            f"<p><strong>Here is an email draft to Joseph, with some suggetsions for improvement:</strong> <br>{suggestion}</p>"
             f"</body>"
             f"</html>"
         )
