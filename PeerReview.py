@@ -116,7 +116,7 @@ df_previous_publications = pd.read_excel('previous_publications.xlsx')
 
 
 df_publications['id'] = pd.to_numeric(df_publications['id'], errors='coerce') # need to convert in working df because the excel changes 'id' column to integers
-df_new_publications = df_publications[~df_publications['id'].isin(df_previous_publications['id'])]
+df_new_publications = df_publications[~df_publications['id'].isin(df_previous_publications['id'])].reset_index(drop=True)
 df_new_publications
 
 
